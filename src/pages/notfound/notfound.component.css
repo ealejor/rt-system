@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container .item .header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--background-color-ofooter);
+}
+.container .item .code {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 20;
+  color: #555555;
+}
+.container .item .description {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  color: #9f9f9f;
+  font-family: RobotoLight, serif;
+}
+.container .item a {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=notfound.component.css.map */

@@ -1,0 +1,33 @@
+.container {
+  padding: 20px 0;
+}
+.container h3 {
+  font-family: RobotoBold, serif;
+  font-size: 24px;
+  color: #952F00;
+  margin-bottom: 20px;
+}
+.container hr {
+  border: 0;
+  border-top: 1px solid var(--background-color-ofooter);
+  margin-bottom: 20px;
+}
+.container p {
+  font-family: RobotoRegular, serif;
+  margin-bottom: 20px;
+}
+.container ul {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.container ul li {
+  margin-bottom: 10px;
+  font-family: RobotoRegular, serif;
+}
+.container .sub {
+  font-family: RobotoBold, serif;
+  color: #952F00;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=approach.component.css.map */

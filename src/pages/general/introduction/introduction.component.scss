@@ -1,0 +1,20 @@
+.container {
+    padding: 20px 0;
+
+    .head {
+        font-family: RobotoBold, serif;
+        font-size: 24px;
+        color: #952F00;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid var(--background-color-ofooter);
+        margin-bottom: 20px;
+    }
+
+    .body {
+        font-family: RobotoRegular, serif;
+    }
+}
