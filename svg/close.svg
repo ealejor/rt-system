@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-    width="20"
-    height="20"
-    style="fill:#ffffff"
+    width="26.745794"
+    height="26.745796"
     id="close"
     xmlns="http://www.w3.org/2000/svg"
 >
     <defs
         id="defs8"/>
+    <circle
+        style="fill:#ffffff;fill-opacity:0.235201;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+        id="path286"
+        cx="13.372897"
+        cy="13.372897"
+        r="13.372897"/>
     <path
-        d="M 17.500221,0 9.9991163,7.5 2.4997788,0 0,2.5 7.4993369,10.000001 0,17.500001 2.4997788,20 9.9991163,12.500001 17.500221,20 20,17.500001 l -7.499337,-7.5 L 20,2.5 Z"
+        d="m 19.564378,5.117832 -6.19221,6.191299 -6.190752,-6.191299 -2.0635836,2.0637662 6.1907516,6.1912998 -6.1907516,6.191299 2.0635836,2.063765 6.190752,-6.191298 6.19221,6.191298 2.063584,-2.063765 -6.190752,-6.191299 6.190752,-6.1912998 z"
         id="path2"
-        style="stroke-width:1.76797"/>
+        style="stroke-width:1.45947"/>
 </svg>
