@@ -14,24 +14,49 @@
         margin-bottom: 20px;
     }
 
-    p {
-        font-family: RobotoRegular, serif;
-        margin-bottom: 20px;
-    }
+    div {
+        background-color: var(--color-bg-text);
+        padding: 20px;
+        border-radius: 10px;
 
-    ul {
-        margin-bottom: 20px;
-        margin-left: 30px;
+        .sub-title {
+            font-family: RobotoBold, serif;
+            font-size: 16px;
+            color: #952F00;
+            margin-bottom: 20px;
+        }
 
-        li {
-            margin-bottom: 10px;
-            font-family: RobotoRegular, serif;
+        .paragraph {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            list-style: none;
+
+            li {
+                margin-bottom: 10px;
+
+                span {
+                    font-family: RobotoRegular, serif;
+                }
+
+                &::before {
+                    content: "• ";
+                    color: var(--background-color-ofooter);
+                }
+            }
         }
     }
 
-    .sub {
+    /*p {
+        font-family: SanFrancisco, serif;
+        margin-bottom: 20px;
+    }*/
+
+    /*.sub {
         font-family: RobotoBold, serif;
         color: #952F00;
         margin-bottom: 20px;
-    }
+    }*/
 }

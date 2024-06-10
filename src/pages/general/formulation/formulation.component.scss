@@ -1,0 +1,64 @@
+.container {
+    margin: 20px 0;
+
+
+    h3 {
+        font-family: RobotoBold, serif;
+        font-size: 24px;
+        color: #952F00;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid var(--background-color-ofooter);
+        margin-bottom: 20px;
+    }
+
+    div {
+        background-color: var(--color-bg-text);
+        padding: 15px;
+        border-radius: 10px;
+
+        .sub-title {
+            font-family: RobotoBold, serif;
+            font-size: 16px;
+            color: #952F00;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .ol {
+            margin-bottom: 20px;
+            list-style: none;
+            counter-reset: item;
+
+            .li {
+                margin-bottom: 10px;
+                counter-increment: item;
+
+                &:before {
+                    content: counter(item) ". ";
+                    color: #952F00;
+                }
+            }
+        }
+    }
+}
+
+.ul {
+    list-style: none;  // Oculta las viñetas predeterminadas
+    margin-left: 20px;
+    .list {
+        margin-bottom: 10px;
+
+        // Agrega tu propia viñeta con el color que desees
+        &::before {
+            content: "• ";  // Puedes cambiar esto a cualquier carácter que desees
+            color: #952F00;  // Cambia esto al color que desees
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.super {
+    margin: 20px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-color-footer);
+        margin: 20px 0;
+        position: relative;
+
+        background-size: 40px 40px;
+        background-image:
+            radial-gradient(circle, rgba(208, 208, 208, 0.5) 1px, transparent 1px),
+            radial-gradient(circle, rgba(208, 208, 208, 0.5) 1px, transparent 1px);
+        background-position: 0 0, 50px 50px;
+
+        /*background-image:
+            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 450px 450px, 300px 300px;
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;*/
+
+        /*background-size: 30px 30px;
+        background-image:
+            radial-gradient(circle, rgba(208, 208, 208, 0.8) 1px, transparent 1px),  // Aumenta el tamaño y oscurece el color de los puntos
+            radial-gradient(circle, rgba(208, 208, 208, 0.8) 1px, transparent 1px);
+        background-position: 0 0, 15px 15px; */
+
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                svg {
+                    &:active {
+                        #icon {
+                            fill: #ffff00;
+                        }
+                    }
+                }
+            }
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            svg {
+                width: 350px;
+                height: 100px;
+            }
+        }
+    }
+
+    .members {
+        p {
+            font-size: 1.5em;
+            font-family: RobotoBold, serif;
+            color: #952F00;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                background-color: var(--background-color-ofooter);
+                border-bottom: 2px solid white;
+                color: white;
+                padding: 10px;
+                font-family: SanFrancisco, serif;
+            }
+        }
+    }
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+// mobile
+@media (max-width: 480px) {
+    .super {
+        .container {
+            background-size: 20px 20px;
+            .title {
+                top: 5px;
+                left: 5px;
+
+                svg {
+                    width: 200px;
+                    height: 60px;
+                }
+            }
+
+            .carousel {
+                button {
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// tablet
+@media (min-width: 481px) and (max-width: 960px) {
+    .super {
+        .container {
+            .title {
+                top: 10px;
+                left: 10px;
+
+                svg {
+                    width: 250px;
+                    height: 83px;
+                }
+            }
+            .carousel {
+                button {
+                    svg {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// desktop
+@media (min-width: 960px) {
+
+}
+
+

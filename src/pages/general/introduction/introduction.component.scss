@@ -1,5 +1,5 @@
 .container {
-    padding: 20px 0;
+    margin: 20px 0;
 
     .head {
         font-family: RobotoBold, serif;
@@ -15,6 +15,10 @@
     }
 
     .body {
-        font-family: RobotoRegular, serif;
+        font-family: SanFrancisco, serif;
+        //border: 1px solid #e8e8e8;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: var(--color-bg-text);
     }
 }

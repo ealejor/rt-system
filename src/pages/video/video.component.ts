@@ -1,23 +1,23 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BreakpointObserver} from "@angular/cdk/layout";
-import {ZoomingComponent} from "@app/pages/zooming/zooming.component";
-import SvgPanZoom from 'svg-pan-zoom';
-
+import {Event} from "@app/app.utils";
+import {EventBus} from "@app/app.event.bus";
 
 
 @Component({
     selector: 'app-video',
     standalone: true,
-    imports: [
-        ZoomingComponent
-    ],
+    imports: [],
     templateUrl: './video.component.html',
     styleUrl: './video.component.scss'
 })
 export class VideoComponent implements OnInit {
     isMobile: boolean = true;
 
-    constructor(private responsive: BreakpointObserver) {
+    constructor(
+        private responsive: BreakpointObserver,
+        private eventBus: EventBus<boolean>
+    ) {
     }
 
     public ngOnInit(): void {
@@ -26,5 +26,6 @@ export class VideoComponent implements OnInit {
         ).subscribe(result => {
             this.isMobile = result.matches;
         });
+        this.eventBus.publish(Event.SHOW_FIRST_FOOTER, true);
     }
 }
