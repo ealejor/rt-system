@@ -3,6 +3,8 @@
     cursor: move;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 
 
     #control {
@@ -27,4 +29,11 @@
         border: 1px solid var(--background-color-footer);
         background-color: var(--color-bg-text);
     }
+}
+
+@media (min-width: 768px){
+    .container-diagram {
+        max-width: 960px;
+    }
+
 }
