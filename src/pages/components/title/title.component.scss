@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+
+    .title {
+
+        font-family: RobotoBold, serif;
+        font-size: 1.3rem;
+        color: #952F00;
+        margin-bottom: 10px;
+    }
+
+    .line {
+        border: 0;
+        border-top: 1px solid rgb(249, 143, 0);
+    }
+}

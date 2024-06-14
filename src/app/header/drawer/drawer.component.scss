@@ -3,16 +3,55 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    gap: 10px;
 
+    .logo {
+        background-color: #181d30;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px 0;
 
-    app-menu {
+        #close {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            cursor: pointer;
+            fill: #d3d3d3;
 
+            &:hover {
+                fill: #ffb3b3;
+            }
+        }
+
+        #icon {
+            width: 170px;
+            height: 90px;
+            @keyframes blink {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            #code {
+                animation: blink 1s infinite;
+            }
+        }
     }
 
-    p {
+    .menu {
+        flex-grow: 1;
+    }
+
+    .copyright {
         align-self: center;
         padding: 10px;
-        color: #FFA500;
+        color: #656565;
         font-family: RobotoLight, monospace;
         font-size: 0.85rem;
     }

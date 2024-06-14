@@ -2,12 +2,17 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/
 import {BreakpointObserver} from "@angular/cdk/layout";
 import {Event} from "@app/app.utils";
 import {EventBus} from "@app/app.event.bus";
+import {TitleComponent} from "@pages/components/title/title.component";
+import {ParagraphComponent} from "@pages/components/paragraph/paragraph.component";
 
 
 @Component({
     selector: 'app-video',
     standalone: true,
-    imports: [],
+    imports: [
+        TitleComponent,
+        ParagraphComponent
+    ],
     templateUrl: './video.component.html',
     styleUrl: './video.component.scss'
 })
@@ -26,6 +31,6 @@ export class VideoComponent implements OnInit {
         ).subscribe(result => {
             this.isMobile = result.matches;
         });
-        this.eventBus.publish(Event.SHOW_FIRST_FOOTER, true);
+        this.eventBus.publish(Event.footer, true);
     }
 }

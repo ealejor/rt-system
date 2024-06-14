@@ -1,5 +1,43 @@
-<div>
-    <p>Not yet implemented!</p>
-    <br>
-    <p>Please enter desktop mode if you are on a mobile device.</p>
-</div>
+<ul class="menu">
+    @for (menu of menus; track menu) {
+        @if (menu.items === undefined) {
+            <li class="item">
+                <a routerLink="{{menu.path}}" (click)="clickInItem()">
+                    {{ menu.title }}
+                </a>
+            </li>
+        } @else {
+            <li class="title-sub-menu" (click)="toggleDisplay()" [ngStyle]="toggleDisplay()">
+                <p>{{ menu.title }}</p>
+                <svg
+                    class="arrow"
+                    x="0px"
+                    y="0px"
+                    width="24"
+                    height="13.996328"
+                    viewBox="0 0 24.000001 13.996329"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                        <defs id="defs39"/>
+                    <g
+                        id="g4"
+                        transform="matrix(0.08423151,0,0,0.08423151,0,-5.0018356)">
+                            <path
+                                d="M 282.082,76.511 267.808,62.238 c -1.902,-1.906 -4.093,-2.856 -6.57,-2.856 -2.471,0 -4.661,0.95 -6.563,2.856 L 142.466,174.441 30.262,62.241 c -1.903,-1.906 -4.093,-2.856 -6.567,-2.856 -2.475,0 -4.665,0.95 -6.567,2.856 L 2.856,76.515 C 0.95,78.417 0,80.607 0,83.082 c 0,2.473 0.953,4.663 2.856,6.565 l 133.043,133.046 c 1.902,1.903 4.093,2.854 6.567,2.854 2.474,0 4.661,-0.951 6.562,-2.854 L 282.082,89.647 c 1.902,-1.903 2.847,-4.093 2.847,-6.565 0,-2.475 -0.945,-4.665 -2.847,-6.571 z"
+                                id="path2"/>
+                        </g>
+                    </svg>
+            </li>
+            <ul class="sub-menu">
+                @for (item of menu.items; track item) {
+                    <li class="sub-item">
+                        <a routerLink="{{item.path}}" (click)="clickInItem()">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+    }
+</ul>

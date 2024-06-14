@@ -1,62 +1,6 @@
 .container {
-    padding: 20px 0;
-
-    h3 {
-        font-family: RobotoBold, serif;
-        font-size: 24px;
-        color: #952F00;
-        margin-bottom: 20px;
+    span{
+        font-family: RobotoRegular,monospace;
+        color: var(--background-color-footer);
     }
-
-    hr {
-        border: 0;
-        border-top: 1px solid var(--background-color-ofooter);
-        margin-bottom: 20px;
-    }
-
-    div {
-        background-color: var(--color-bg-text);
-        padding: 20px;
-        border-radius: 10px;
-
-        .sub-title {
-            font-family: RobotoBold, serif;
-            font-size: 16px;
-            color: #952F00;
-            margin-bottom: 20px;
-        }
-
-        .paragraph {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            margin-bottom: 20px;
-            list-style: none;
-
-            li {
-                margin-bottom: 10px;
-
-                span {
-                    font-family: RobotoRegular, serif;
-                }
-
-                &::before {
-                    content: "• ";
-                    color: var(--background-color-ofooter);
-                }
-            }
-        }
-    }
-
-    /*p {
-        font-family: SanFrancisco, serif;
-        margin-bottom: 20px;
-    }*/
-
-    /*.sub {
-        font-family: RobotoBold, serif;
-        color: #952F00;
-        margin-bottom: 20px;
-    }*/
 }

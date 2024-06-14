@@ -1,3 +1,4 @@
+/*
 .container {
     margin: 20px 0;
 
@@ -60,5 +61,13 @@
             content: "• ";  // Puedes cambiar esto a cualquier carácter que desees
             color: #952F00;  // Cambia esto al color que desees
         }
+    }
+}
+*/
+
+.container{
+    span{
+        font-family: RobotoRegular, serif;
+        color: var(--background-color-footer);
     }
 }

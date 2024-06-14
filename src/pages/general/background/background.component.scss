@@ -1,47 +1,6 @@
 .container {
-    padding: 20px 0;
-
-    .head {
-        font-family: RobotoBold, serif;
-        font-size: 24px;
-        color: #952F00;
-        margin-bottom: 20px;
-    }
-
-    hr {
-        border: 0;
-        border-top: 1px solid var(--background-color-ofooter);
-        margin-bottom: 20px;
-    }
-
-    div {
-        background-color: var(--color-bg-text);
-        padding: 15px;
-        border-radius: 10px;
-
-        .paragraph {
-            font-family: SanFrancisco, serif;
-            margin-bottom: 20px;
-        }
-
-        .ol {
-            margin-bottom: 20px;
-            margin-left: 20px;
-            list-style: none;
-
-            .li {
-                margin-bottom: 10px;
-                font-family: SanFrancisco, serif;
-
-                span {
-                    font-family: RobotoRegular, serif;
-                }
-
-                &::before {
-                    content: "• ";
-                    color: #952F00;
-                }
-            }
-        }
+    span {
+        font-family: RobotoRegular, serif;
+        color: var(--background-color-footer);
     }
 }

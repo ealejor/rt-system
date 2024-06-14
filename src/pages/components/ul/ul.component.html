@@ -1,0 +1,6 @@
+<div class="container" [ngStyle]="{'margin-top': margin.top + 'px', 'margin-bottom': margin.bottom + 'px'}">
+    <p class="paragraph" [ngStyle]="{'margin-left': tab * 8 + 'px'}">
+        <span>&bull; </span>
+        <ng-content select="[value]"/>
+    </p>
+</div>

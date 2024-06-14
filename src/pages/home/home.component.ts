@@ -21,19 +21,34 @@ export class HomeComponent implements OnInit {
         'img/taxi_2.png',
         'img/taxi_3.png'
     ];
-    currentIndex: number = 0;
+
+    public currentIndex: number = 0;
+    private intervalId: any;
 
     ngOnInit(): void {
-        // Optionally, you can set up an interval to auto-slide the images
-        setInterval(() => this.next(), 5000); // Change image every 5 seconds
-        this.eventBus.publish(Event.SHOW_FIRST_FOOTER, false);
+        this.startSlideshow();
+        this.eventBus.publish(Event.footer, false);
+    }
+
+    startSlideshow(): void {
+        this.stopSlideshow();
+        this.intervalId = setInterval(() => this.next(), 5000); // Change image every 5 seconds
+    }
+
+    stopSlideshow(): void {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+            this.intervalId = null;
+        }
     }
 
     prev(): void {
         this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;
+        this.startSlideshow();
     }
 
     next(): void {
         this.currentIndex = (this.currentIndex === this.images.length - 1) ? 0 : this.currentIndex + 1;
+        this.startSlideshow();
     }
 }

@@ -26,7 +26,7 @@ export class FirstFooterComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.responsive.observe(Event.IS_MOBILE).subscribe(result => {
+        this.responsive.observe(Event.mobile).subscribe(result => {
             this.isMobile = result.matches;
         });
     }

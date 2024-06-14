@@ -1,0 +1,16 @@
+.container {
+    .paragraph {
+        font-family: SanFrancisco, serif;
+        color: var(--color-text);
+
+        display: flex;
+        flex-direction: row;
+
+        span {
+            color: #952F00;
+            padding-right: 5px;
+            font-family: RobotoBold, sans-serif;
+            user-select: none;
+        }
+    }
+}

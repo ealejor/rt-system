@@ -21,6 +21,7 @@ import {VideoComponent} from "@pages/video/video.component";
 import {AboutComponent} from "@pages/about/about.component";
 import {NotfoundComponent} from "@pages/notfound/notfound.component";
 import {FormulationComponent} from "@pages/general/formulation/formulation.component";
+import {UsecaseComponent} from "@pages/oo/usecase/usecase.component";
 
 export const routes: Routes = [
     // Inicio
@@ -79,6 +80,9 @@ export const routes: Routes = [
     },
     {
         path: 'orientado-a-objetos/diagrama-casos-de-uso-del-sistema', component: SystemComponent
+    },
+    {
+        path: 'orientado-a-objetos/diagrama-de-casos-de-uso', component: UsecaseComponent
     },
     {
         path: 'orientado-a-objetos/diagrama-de-secuencia', component: SequenceComponent

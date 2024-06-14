@@ -21,20 +21,20 @@ export class NotfoundComponent implements OnInit {
         private eventBus: EventBus<boolean>
     ) {
         /*this.eventBus.cast<boolean>(Event.NOT_FOUND, true);*/
-        this.eventBus.publish(Event.NOT_FOUND, true);
+        this.eventBus.publish(Event.notfound, true);
     }
 
     public ngOnInit(): void {
         /*this.eventBus.on<boolean>(Event.IS_MOBILE).subscribe(result => {
             this.isMobile = result.data !== undefined ? result.data : this.isMobile;
         });*/
-        this.eventBus.subscribe(Event.IS_MOBILE, result => {
+        this.eventBus.subscribe(Event.mobile, result => {
             this.isMobile = result;
         });
     }
 
     public clickInStart(): void {
         /*this.eventBus.cast<boolean>(Event.NOT_FOUND, false);*/
-        this.eventBus.publish(Event.NOT_FOUND, false);
+        this.eventBus.publish(Event.notfound, false);
     }
 }

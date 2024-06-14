@@ -2,22 +2,23 @@
     font-family: CustomFont, monospace;
     color: var(--color-text);
     font-size: 1rem;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    justify-content: space-between;
 
     .header {
         background: var(--background-color-header);
         position: sticky;
         top: 0;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        z-index: 999;
+        z-index: 1;
     }
 
     .main {
         background: var(--background-color-main);
-        flex-grow: 1; // Hace que el elemento crezca para ocupar el espacio restante
+        flex: 1; // Hace que el elemento crezca para ocupar el espacio restante
     }
 
     .ofooter {

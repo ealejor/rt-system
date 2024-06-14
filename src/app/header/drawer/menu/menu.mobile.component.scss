@@ -1,7 +1,84 @@
-div {
-    padding: 20px;
-    p {
-        font-family: RobotoLight, serif;
+.menu {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        list-style: none;
         color: #b1b1b1;
+
+        a {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            cursor: pointer;
+            color: #b1b1b1;
+            text-decoration: none;
+            padding: 5px 20px;
+            width: 100%; // para que ocupe todo el ancho
+            font-family: RobotoLight, monospace;
+
+            &:hover {
+                background-color: rgba(249, 143, 0, 0.09);
+                color: #f98f00;
+            }
+        }
+    }
+
+    .title-sub-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 20px;
+        cursor: pointer;
+        color: #b1b1b1;
+
+        &:hover {
+            background-color: rgba(249, 143, 0, 0.09);
+            color: #f98f00;
+
+            svg {
+                fill: #f98f00;
+            }
+        }
+
+        p {
+            font-family: RobotoLight, monospace;
+        }
+
+        svg {
+            fill: #b1b1b1;
+            width: 12px;
+        }
+    }
+
+    .sub-menu {
+        .sub-item {
+            display: flex; // cambio de none a flex
+            flex-direction: row;
+            justify-content: space-between;
+
+            list-style: none;
+            color: #b1b1b1;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                color: #b1b1b1;
+                text-decoration: none;
+                padding: 5px 40px;
+                width: 100%; // para que ocupe todo el ancho
+                font-family: RobotoLight, monospace;
+
+                &:hover {
+                    background-color: rgba(249, 143, 0, 0.09);
+                    color: #f98f00;
+                }
+            }
+        }
     }
 }

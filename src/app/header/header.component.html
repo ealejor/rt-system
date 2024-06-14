@@ -5,7 +5,7 @@
             <div class="backdrop" (click)="this.clickInBackdrop()"></div>
         }
         <dialog class="drawer" [open]="openDrawer">
-            <app-drawer/>
+            <app-drawer [menus]="menus"/>
         </dialog>
     }
 
@@ -107,7 +107,7 @@
             </svg>
         </div>
     } @else {
-        <app-menu-desktop class="desk"/>
+        <app-menu-desktop class="desk" [menus]="menus"/>
     }
 
 </div>

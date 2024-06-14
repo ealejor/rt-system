@@ -1,0 +1,5 @@
+<div class="container" [ngStyle]="{'margin-top': margin.top + 'px', 'margin-bottom': margin.bottom + 'px'}">
+    <p class="value">
+        <ng-content select="[value]"></ng-content>
+    </p>
+</div>

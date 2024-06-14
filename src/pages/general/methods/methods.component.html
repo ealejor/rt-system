@@ -1,1 +1,68 @@
-<p>methods works!</p>
+<div class="container">
+    <app-title [margin]="{top:20,bottom:10}">
+        <p value>Métodos, medios e instrumentos de investigación que se usarán.</p>
+    </app-title>
+    <app-paragraph [margin]="{top:10,bottom:10}">
+        <p value>
+            Primero definiremos el propósito que está destinada a desarrollar un sistema que permitirá perfeccionar la
+            gestión de los usuarios a través de una telefonía moderna, facilitando el manejo y/o pedido de radio taxis y
+            definir las especificaciones funcionales, no funcionales de manera clara para el desarrollo de un sistema
+            que permita dar solución a la problemática que presentaremos. El Alcance del sistema está dirigida a todos
+            los conductores y/o clientes de la empresa para la cual estamos desarrollando el sistema, para agilizar el
+            pedido de un radio taxi pidiendo al usuario que ingrese sus coordenadas UTM en Google Maps con el fin de
+            facilitar y automatizar la mayoría de las características de esta, la cual tiene como objetivo establecer un
+            vínculo entre empleado y cliente mejorando la atención.
+        </p>
+    </app-paragraph>
+    <app-paragraph [margin]="{top:10,bottom:10}">
+        <p value>
+            Primero definiremos el propósito que está destinada a desarrollar un sistema que permitirá perfeccionar la
+            El alcance es que los propios usuarios puedan gestionar y controlar sus rutas llevando un control sobre las
+            reservas que realicen.
+        </p>
+    </app-paragraph>
+    <app-paragraph [margin]="{top:10,bottom:10}">
+        <p value>
+            La metodología a usar será la XP, La Programación Extrema o Extreme Programing, es un enfoque de la
+            ingeniería de software formulado por Kent Beck, se considera el más destacado de los procesos ágiles de
+            desarrollo de software. Al igual que estos, la programación extrema se diferencia de los métodos
+            tradicionales principalmente en que presenta más énfasis en la adaptabilidad que en la predecible.
+        </p>
+    </app-paragraph>
+    <app-paragraph [margin]="{top:10,bottom:20}">
+        <p value>
+            Aplicar la metodología de Extreme Programming (XP) para desarrollar un sistema de radio taxis implica seguir
+            sus prácticas y principios para asegurar que el software cumpla con los requisitos del cliente y sea de alta
+            calidad. Describiremos los pasos que se deben realizar para poder aplicar esta metodología de manera
+            completa:
+        </p>
+    </app-paragraph>
+
+    <!---->
+    @for (x of data; track x) {
+        <app-ol [margin]="{top:10,bottom:10}" [num]="$index + 1">
+            <p value><span>{{ x.subtitle }}</span></p>
+        </app-ol>
+        @for (y of x.bullets; track y) {
+            <app-ul [margin]="{top:10,bottom:10}" [tab]="3">
+                <p value>{{ y.value }}</p>
+            </app-ul>
+            @if (y.subbullets != undefined) {
+                @for (z of y.subbullets; track z) {
+                    <app-ul [margin]="{top:10,bottom:10}" [tab]="6">
+                        <p value>{{ z }}</p>
+                    </app-ul>
+                }
+            }
+        }
+    }
+
+    <app-paragraph [margin]="{top:20,bottom:30}">
+        <p value>
+            Aplicar XP en el desarrollo de un sistema de radio taxis asegura que el software sea de alta calidad y
+            responda rápidamente a las necesidades del cliente. Las prácticas de XP, como la programación en pares, las
+            pruebas continuas y la integración frecuente, ayudan a minimizar errores y a entregar valor de manera
+            incremental y continua.
+        </p>
+    </app-paragraph>
+</div>

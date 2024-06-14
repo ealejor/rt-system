@@ -4,6 +4,10 @@
     gap: 20px;
     height: 4.4rem;
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     .li {
         list-style: none;
         position: relative;

@@ -26,17 +26,15 @@ export class AppComponent implements OnInit {
         private eventBus: EventBus<boolean>
     ) {
         this.isMobile = this.breakpoint.isMatched(Breakpoint.MOBILE);
-        window.length;
+        this.eventBus.publish(Event.footer, false);
     }
 
     public ngOnInit(): void {
-        this.eventBus.publish(Event.SHOW_FIRST_FOOTER, false);
-
         this.breakpoint.observe(
             Breakpoint.MOBILE
         ).subscribe(result => {
             this.isMobile = result.matches;
-            this.eventBus.publish(Event.IS_MOBILE, this.isMobile);
+            this.eventBus.publish(Event.mobile, this.isMobile);
         });
 
         this.breakpoint.observe(
@@ -51,11 +49,11 @@ export class AppComponent implements OnInit {
             this.isTablet = result.matches;
         });
 
-        this.eventBus.subscribe(Event.SHOW_FIRST_FOOTER, (result) => {
+        this.eventBus.subscribe(Event.footer, (result) => {
             this.showFirstFooter = result;
         });
 
-        this.eventBus.subscribe(Event.NOT_FOUND, (result) => {
+        this.eventBus.subscribe(Event.notfound, (result) => {
             this.isNotFound = result;
         });
     }

@@ -1,0 +1,41 @@
+.container-diagram {
+    position: relative;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    max-width: 960px;
+
+
+    #control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: auto;
+
+        #zoom-in, #zoom-out, #zoom-reset, #move-left, #move-right, #move-top, #move-bottom {
+            cursor: pointer;
+        }
+
+        #rect {
+            cursor: auto;
+        }
+    }
+
+    #diagram {
+        width: 100%;
+        height: max-content;
+        border: 1px solid var(--background-color-footer);
+        background-color: var(--color-bg-text);
+        max-height: 500px;
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-diagram {
+
+    }
+}

@@ -17,6 +17,6 @@ export class SequenceComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.eventBus.publish(Event.SHOW_FIRST_FOOTER, true);
+        this.eventBus.publish(Event.footer, true);
     }
 }

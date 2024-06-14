@@ -3,10 +3,11 @@
 //
 
 export enum Event {
-    IS_OPEN_DRAWER = 'open:drawer',
-    NOT_FOUND = 'not:found',
-    IS_MOBILE = 'is:mobile',
-    SHOW_FIRST_FOOTER = 'show:first:footer',
+    drawer = 'open:drawer',
+    backdrop = 'show:backdrop',
+    notfound = 'not:found',
+    mobile = 'is:mobile',
+    footer = 'show:first:footer',
 }
 
 export interface Item {
