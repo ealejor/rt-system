@@ -1,12 +1,38 @@
 <div class="container">
     <app-title [margin]="{top:20, bottom:10}">
+        <p value>MODELO ESENCIAL</p>
+    </app-title>
+
+    <app-paragraph [margin]="{top:20, bottom:10}">
+        <p value>
+            Es un modelo de lo que el sistema
+            debe hacer para satisfacer los
+            requerimientos del usuario diciendo lo
+            mínimo posible (de preferencia nada)
+            sobre cómo se implementará el sistema. Los
+            componentes de este modelo son dos:
+        </p>
+    </app-paragraph>
+
+    <app-ul [tab]="3">
+        <p value>
+            Modelo ambiental
+        </p>
+    </app-ul>
+    <app-ul [tab]="3">
+        <p value>
+            <a routerLink="/estructurado/modelo-de-comportamiento">Modelo de comportamiento</a>
+        </p>
+    </app-ul>
+
+    <app-title [margin]="{top:20, bottom:10}">
         <p value>Modelo ambiental</p>
     </app-title>
 
     <app-paragraph [margin]="{top:10,bottom:10}">
         <p value>
             Define la frontera entre el sistema y el
-            ambiente en el cual existe el sistema
+            ambiente en el cual existe el sistema.
         </p>
     </app-paragraph>
 
@@ -19,9 +45,15 @@
     <app-ul [margin]="{top:10,bottom:10}" [tab]="3">
         <p value>Diagrama de contexto.</p>
     </app-ul>
-    <app-ul [margin]="{top:10,bottom:20}" [tab]="3">
+    <app-ul [margin]="{top:10,bottom:10}" [tab]="3">
         <p value>Lista de acontecimientos.</p>
     </app-ul>
+
+    <app-paragraph [margin]="{top:10,bottom:10}">
+        <p value>
+            A continuación se presenta el modelo ambiental del Sistema Radio Taxi.
+        </p>
+    </app-paragraph>
 
     <app-subtitle [margin]="{top:10, bottom:10}">
         <p value>Declaración de propósitos</p>
@@ -1339,10 +1371,8 @@
         <app-ul [margin]="{top:10, bottom:10}" [tab]="3">
             <p value><span>Descripción: </span>{{ x.obj.description }}</p>
         </app-ul>
-        <app-ul [margin]="{top:10, bottom:10}" [tab]="3">
+        <app-ul [margin]="{top:10, bottom:20}" [tab]="3">
             <p value><span>Resultado: </span>{{ x.obj.result }}</p>
         </app-ul>
     }
-
-    <br>
 </div>

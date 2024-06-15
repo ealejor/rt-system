@@ -1,11 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {EventBus} from "@app/app.event.bus";
 import {Event} from "@app/app.utils";
+import {TitleComponent} from "@pages/components/title/title.component";
 
 @Component({
     selector: 'app-planning',
     standalone: true,
-    imports: [],
+    imports: [
+        TitleComponent
+    ],
     templateUrl: './planning.component.html',
     styleUrl: './planning.component.scss'
 })

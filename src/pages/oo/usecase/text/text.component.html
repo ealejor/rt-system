@@ -1,0 +1,32 @@
+<div class="container">
+
+    <p class="title"><span>Caso de uso</span><span>:</span></p>
+    <p class="content">{{ useCaseExtended.usecase }}</p>
+
+    <p class="title"><span>Actores</span><span>:</span></p>
+    <p class="content">{{ useCaseExtended.actors }}</p>
+
+    <p class="title"><span>Tipo</span><span>:</span></p>
+    <p class="content">{{ useCaseExtended.type }}</p>
+
+    <p class="title"><span>Objetivo</span><span>:</span></p>
+    <p class="content">{{ useCaseExtended.objective }}</p>
+
+    <p class="title"><span>Resumén</span><span>:</span></p>
+    <p class="content">{{ useCaseExtended.resume }}</p>
+
+    <p class="title"><span>Curso normal</span><span>:</span></p>
+    <div>
+        <app-table [data]="useCaseExtended.normal"></app-table>
+    </div>
+
+    <p class="title"><span>Curso alterno</span><span>:</span></p>
+    <div>
+        @for (x of useCaseExtended.alternative; track x) {
+            <app-ul>
+                <p value>{{ x }}</p>
+            </app-ul>
+        }
+    </div>
+
+</div>

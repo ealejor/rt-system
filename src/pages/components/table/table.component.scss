@@ -1,0 +1,37 @@
+.container {
+    //margin: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-left: 1px solid #f2d082;
+    border-right: 1px solid #f2d082;
+
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f2d082;
+    //font-family: RobotoRegular, monospace;
+}
+
+th {
+    background-color: #f2d082;
+    text-align: center;
+    font-family: SanFrancisco, monospace;
+    color: #2e3349;
+
+}
+
+td {
+    font-family: SanFrancisco, monospace;
+    color: var(--color-text);
+}
+
+/*tr:hover {
+    background-color: #f2d082;
+}*/
+

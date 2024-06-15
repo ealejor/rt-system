@@ -1,0 +1,27 @@
+.container {
+    .png {
+        //margin-bottom: 20px;
+        /*margin: auto auto;
+        max-width: 960px;*/
+        display: flex;
+
+        img {
+            /*width: 100%;
+            height: auto;*/
+            margin: auto auto;
+            max-width: 960px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        .png {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@ import {ParagraphComponent} from "@pages/components/paragraph/paragraph.componen
 import {OlComponent} from "@pages/components/ol/ol.component";
 import {UlComponent} from "@pages/components/ul/ul.component";
 import SvgPanZoom from "svg-pan-zoom";
+import {RouterLink} from "@angular/router";
 
 interface Obj {
     actor: string;
@@ -27,7 +28,8 @@ interface Data {
         SubtitleComponent,
         ParagraphComponent,
         OlComponent,
-        UlComponent
+        UlComponent,
+        RouterLink
     ],
     templateUrl: './environmental.component.html',
     styleUrl: './environmental.component.scss'

@@ -1,0 +1,20 @@
+@if (data.length > 0) {
+    <div class="container">
+        <table>
+            <thead>
+            <tr>
+                <th>Acciones del actor</th>
+                <th>Respuesta del sistema</th>
+            </tr>
+            </thead>
+            <tbody>
+                @for (d of data; track d) {
+                    <tr>
+                        <td>{{ d.actionActors }}</td>
+                        <td>{{ d.responseSystem }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

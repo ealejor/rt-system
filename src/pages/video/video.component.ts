@@ -4,6 +4,7 @@ import {Event} from "@app/app.utils";
 import {EventBus} from "@app/app.event.bus";
 import {TitleComponent} from "@pages/components/title/title.component";
 import {ParagraphComponent} from "@pages/components/paragraph/paragraph.component";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
@@ -11,7 +12,8 @@ import {ParagraphComponent} from "@pages/components/paragraph/paragraph.componen
     standalone: true,
     imports: [
         TitleComponent,
-        ParagraphComponent
+        ParagraphComponent,
+        RouterLink
     ],
     templateUrl: './video.component.html',
     styleUrl: './video.component.scss'

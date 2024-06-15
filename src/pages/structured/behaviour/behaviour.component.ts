@@ -8,6 +8,8 @@ import {SubtitleComponent} from "@pages/components/subtitle/subtitle.component";
 import {ParagraphComponent} from "@pages/components/paragraph/paragraph.component";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 import {HttpClient} from "@angular/common/http";
+import {UlComponent} from "@pages/components/ul/ul.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
     selector: 'app-behaviour',
@@ -16,19 +18,27 @@ import {HttpClient} from "@angular/common/http";
         DiagramComponent,
         TitleComponent,
         SubtitleComponent,
-        ParagraphComponent
+        ParagraphComponent,
+        UlComponent,
+        RouterLink
     ],
     templateUrl: './behaviour.component.html',
     styleUrl: './behaviour.component.scss'
 })
 export class BehaviourComponent implements OnInit, AfterViewInit {
-    @ViewChild('diagram', {static: false}) svg!: ElementRef<SVGSVGElement>;
-    public panZoom!: SvgPanZoom.Instance;
-    displacement = 50;
+    @ViewChild('diagram1', {static: false})
+    private diagram1!: ElementRef<SVGSVGElement>;
+    public panZoom1!: SvgPanZoom.Instance;
+
+    @ViewChild('diagram2', {static: false})
+    private diagram2!: ElementRef<SVGSVGElement>;
+    public panZoom2!: SvgPanZoom.Instance;
+
+
+    private displacement: number = 25;
 
     constructor(
-        private eventBus: EventBus<boolean>,
-        private renderer: Renderer2,
+        private eventBus: EventBus<boolean>
     ) {
     }
 
@@ -36,9 +46,17 @@ export class BehaviourComponent implements OnInit, AfterViewInit {
         this.eventBus.publish(Event.footer, true);
     }
 
-    ngAfterViewInit() {
-        const id = document.getElementById('diagram')!;
-        this.panZoom = SvgPanZoom(this.svg.nativeElement, {
+    ngAfterViewInit(): void {
+        this.panZoom1 = SvgPanZoom(this.diagram1.nativeElement, {
+            zoomEnabled: false,
+            controlIconsEnabled: false,
+            maxZoom: 1000,
+            minZoom: 0.1,
+            fit: true,
+            center: true,
+            preventMouseEventsDefault: true,
+        });
+        this.panZoom2 = SvgPanZoom(this.diagram2.nativeElement, {
             zoomEnabled: false,
             controlIconsEnabled: false,
             maxZoom: 1000,
@@ -49,31 +67,31 @@ export class BehaviourComponent implements OnInit, AfterViewInit {
         });
     }
 
-    zoomIn() {
-        this.panZoom.zoomIn();
+    zoomIn(panZoom: SvgPanZoom.Instance) {
+        panZoom.zoomIn();
     }
 
-    zoomOut() {
-        this.panZoom.zoomOut();
+    zoomOut(panZoom: SvgPanZoom.Instance) {
+        panZoom.zoomOut();
     }
 
-    zoomReset() {
-        this.panZoom.reset();
+    zoomReset(panZoom: SvgPanZoom.Instance) {
+        panZoom.reset();
     }
 
-    moveTop() {
-        this.panZoom.panBy({x: 0, y: -this.displacement});
+    moveTop(panZoom: SvgPanZoom.Instance) {
+        panZoom.panBy({x: 0, y: -this.displacement});
     }
 
-    moveBottom() {
-        this.panZoom.panBy({x: 0, y: this.displacement});
+    moveBottom(panZoom: SvgPanZoom.Instance) {
+        panZoom.panBy({x: 0, y: this.displacement});
     }
 
-    moveLeft() {
-        this.panZoom.panBy({x: -this.displacement, y: 0});
+    moveLeft(panZoom: SvgPanZoom.Instance) {
+        panZoom.panBy({x: -this.displacement, y: 0});
     }
 
-    moveRight() {
-        this.panZoom.panBy({x: this.displacement, y: 0});
+    moveRight(panZoom: SvgPanZoom.Instance) {
+        panZoom.panBy({x: this.displacement, y: 0});
     }
 }
