@@ -1,6 +1,8 @@
-# Sistema RT "Radio Taxi"
+# Sistema "Radio Taxi"
 
-This project was **generated** with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3. and all dependencies are in the `package.json` file.
+This project was **generated** with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+
+To access this project in production you can enter the following link: [https://ealejor.github.io/rt-system](https://ealejor.github.io/rt-system).
 
 ## Component structure
 
